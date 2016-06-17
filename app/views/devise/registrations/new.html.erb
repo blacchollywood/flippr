@@ -1,0 +1,46 @@
+<body>
+  <div class="section"></div>
+  <main>
+    <center>
+
+      <div class="container">
+        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+
+<h2>Create Account</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <i class="material-icons prefix">mail_outline</i>
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+            <i class="material-icons prefix">vpn_key</i>
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+            <i class="material-icons prefix">vpn_key</i>
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+<div class="input-field col s8 offset-s3">
+  <div class="actions col s8 btn btn waves-effect teal">
+    <%= f.submit "Sign up" %>
+  </div>
+  <br>
+<% end %>
+
+  </div>
+<div class="section"></div>
+</div>
+</center>
+</main>
+</body>

@@ -1,3 +1,11 @@
+<body>
+  <div class="section"></div>
+  <main>
+    <center>
+
+      <div class="container">
+        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+
 <h2>Forgot your password?</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
@@ -5,12 +13,21 @@
 
   <div class="field">
     <%= f.label :email %><br />
+            <i class="material-icons prefix">mail_outline</i>
     <%= f.email_field :email, autofocus: true %>
   </div>
-
+    <div class="section"></div>
+<div class="section"></div>
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.submit "Send me reset password instructions" , class:"btn btn waves-effect teal" %>
   </div>
+    <div class="section"></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+</div>
+</div>
+</center>
+</main>
+</body>

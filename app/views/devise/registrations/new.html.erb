@@ -31,15 +31,15 @@
             <i class="material-icons prefix">vpn_key</i>
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
-<div class="input-field col s8 offset-s3">
-  <div class="actions col s8 btn btn waves-effect teal">
+<div class="input-field col s8 offset-s2">
+  <div class="actions btn btn waves-effect teal">
     <%= f.submit "Sign up" %>
-  </div>
-  <br>
+      </div>
 <% end %>
-
+  <div class="section"></div>
+  <%= render "devise/shared/links" %>
   </div>
-<div class="section"></div>
+</div>
 </div>
 </center>
 </main>

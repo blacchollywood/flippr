@@ -13,12 +13,13 @@
 </head>
 <body>
   <%= render 'layouts/header' %>
-<div class ="container">
+<div class="section"></div>
+    <center>
   <% flash.each do |name, msg| %>
-     <%= content_tag(:div, msg, class: "#{name}") %>
+       <div class="section"></div>
+     <%= content_tag(:div, msg, class: "#{name} z-depth-1 grey lighten-4", style: "display: inline-block; padding: 16px 48px 16px 48px; border: 1px solid #EEE;") %> 
 <% end %>
 <%= yield %>
-</div>
-
+</center>
 </body>
 </html>
